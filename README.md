@@ -1,36 +1,15 @@
-# Physics Portfolio
+# شعبتي — Next.js + Prisma + SSE
 
-Hi! I'm Sarah, a Physics student interested in applying physics to real-world problems through technology, programming, and scientific projects.
+## تشغيل محلي
+    npm install
+    npm run dev        # http://localhost:3000
 
-## Areas of Interest
+## نشر حقيقي (Railway أو Render؛ يحتاج خادم Node دائم، لا Vercel بسبب SSE والمحاكي)
+1. ارفع المجلد إلى GitHub.
+2. Railway: New Project ← Deploy from GitHub. أضف Volume على /data
+   وعيّن DATABASE_URL=file:/data/prod.db
+3. Build: npm run build — Start: npm start
+4. لبيانات الجامعة الحقيقية: SIMULATE=false وغذِّ جدول Section من نظام التسجيل.
 
-- Physics
-- Programming
-- Data Analysis
-- IoT & Sensors
-- Nanotechnology
-- Renewable Energy
-- Scientific Computing
-
-## Projects
-
-This portfolio documents my learning journey, certifications, and practical projects.
-
-Projects will be added as I develop new skills and apply them to real-world problems.
-
-## Skills
-
-- Physics
-- Python
-- Arduino
-- Data Analysis
-- Scientific Problem Solving
-
-## Learning Approach
-
-I believe in learning by doing:
-
-**Learn → Build → Document → Improve**
-
-Each course or certification will be accompanied by a practical project whenever possible.# physics-portfolio
-A portfolio of physics, programming, data analysis, IoT, and scientific projects
+## للتوسع
+غيّر provider في prisma/schema.prisma إلى postgresql وDATABASE_URL إلى Neon أو Supabase.
